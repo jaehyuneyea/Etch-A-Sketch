@@ -21,3 +21,8 @@ for(let i=0; i < gridSize; i++) {
     currRow.append(box);
   }
 }
+
+let grids = document.querySelectorAll('.grid');
+Array.from(grids).forEach(grid => grid.addEventListener('mouseover', () => {
+  grid.classList.add('coloured');
+}));
