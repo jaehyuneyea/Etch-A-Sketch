@@ -31,3 +31,8 @@ Array.from(grids).forEach(grid => grid.addEventListener('mouseover', () => {
   grid.classList.add('coloured');
 }));
 
+let reset = document.querySelector('#reset');
+reset.addEventListener('click', () => {
+  grids.forEach(grid => grid.classList.remove('coloured'));
+});
+
