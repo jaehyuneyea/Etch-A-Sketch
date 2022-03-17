@@ -1,4 +1,4 @@
-let gridSize = 10;
+let gridSize = 16;
 const MAX_WIDTH = 640;
 const container = document.querySelector('.main-grid');
 container.style.height = `${MAX_WIDTH}px`;
@@ -22,17 +22,27 @@ function createGrid(size) {
       currRow.append(box);
     }
   }
+  let grids = document.querySelectorAll('.grid');
+  Array.from(grids).forEach(grid => grid.addEventListener('mouseover', () => {
+    grid.classList.add('coloured');
+  }));
+}
+
+function removeGrid() {
+  let container = document.querySelector('.main-grid');
+  container.innerHTML = '';
 }
 
 createGrid(gridSize);
 
-let grids = document.querySelectorAll('.grid');
-Array.from(grids).forEach(grid => grid.addEventListener('mouseover', () => {
-  grid.classList.add('coloured');
-}));
+
 
 let reset = document.querySelector('#reset');
 reset.addEventListener('click', () => {
-  grids.forEach(grid => grid.classList.remove('coloured'));
+  document.querySelectorAll('.grid').forEach(grid => grid.classList.remove('coloured'));
+  let newGrid = prompt('Enter the size of the new grid (less than 100)');
+  removeGrid();
+  newGrid > 100 ? alert('Make a smaller grid!') : createGrid(newGrid);
 });
+
 
