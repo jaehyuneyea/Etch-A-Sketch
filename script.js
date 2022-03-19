@@ -4,11 +4,6 @@ const container = document.querySelector('.main-grid');
 container.style.height = `${MAX_WIDTH}px`;
 container.style.width = `${MAX_WIDTH}px`;
 
-let rgb = document.createElement('rgb');
-rgb.type = 'text/css';
-rgb.innerHTML = `.cssClass { background-color: red }`;
-
-
 function createGrid(size) {
   for(let i=0; i < size; i++) {
     let row = document.createElement('div');
