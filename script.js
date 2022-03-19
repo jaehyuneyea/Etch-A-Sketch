@@ -28,7 +28,7 @@ function createGrid(size) {
     }
   }
   let grids = document.querySelectorAll('.grid');
-  Array.from(grids).forEach(grid => grid.addEventListener('mouseover', () => {
+  grids.forEach(grid => grid.addEventListener('mouseover', () => {
     grid.classList.add('coloured');
   }));
 }
@@ -52,6 +52,15 @@ reset.addEventListener('click', () => {
   removeGrid();
   newGrid > 100 ? alert('Make a smaller grid!') : createGrid(newGrid);
 });
+
+let black = document.querySelector('#black');
+black.addEventListener('click', () => {
+  let grids = document.querySelectorAll('.grid');
+  grids.forEach(grid => grid.addEventListener('mouseover', () => {
+    grid.style.backgroundColor = 'black';
+    grid.classList.add('coloured');
+  }))
+})
 
 let rgbButton = document.querySelector('#rgb');
 rgbButton.addEventListener('click', () => {
