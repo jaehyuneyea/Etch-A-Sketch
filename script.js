@@ -4,6 +4,11 @@ const container = document.querySelector('.main-grid');
 container.style.height = `${MAX_WIDTH}px`;
 container.style.width = `${MAX_WIDTH}px`;
 
+let rgb = document.createElement('rgb');
+rgb.type = 'text/css';
+rgb.innerHTML = `.cssClass { background-color: red }`;
+
+
 function createGrid(size) {
   for(let i=0; i < size; i++) {
     let row = document.createElement('div');
@@ -33,8 +38,11 @@ function removeGrid() {
   container.innerHTML = '';
 }
 
-createGrid(gridSize);
+function random_RGB() {
+  return Math.floor(Math.random() * 256);
+}
 
+createGrid(gridSize);
 
 
 let reset = document.querySelector('#reset');
@@ -44,5 +52,17 @@ reset.addEventListener('click', () => {
   removeGrid();
   newGrid > 100 ? alert('Make a smaller grid!') : createGrid(newGrid);
 });
+
+let rgbButton = document.querySelector('#rgb');
+rgbButton.addEventListener('click', () => {
+  let grids = document.querySelectorAll('.grid');
+  grids.forEach(grid => grid.addEventListener('mouseover', () => {
+    grid.classList.remove('coloured');
+    let r = random_RGB();
+    let g = random_RGB();
+    let b = random_RGB();
+    grid.style.backgroundColor = `rgb(${r},${g},${b})`;
+  }))
+})
 
 

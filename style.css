@@ -5,3 +5,7 @@
 .coloured {
   background-color: black;
 }
+
+.coloured.rgb {
+  background-color: red;
+}
