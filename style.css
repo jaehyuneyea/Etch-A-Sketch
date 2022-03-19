@@ -2,6 +2,17 @@
   display: flex;
 }
 
+body {
+  background-color: paleturquoise;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .coloured {
   background-color: black;
 }
