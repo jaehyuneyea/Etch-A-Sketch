@@ -45,8 +45,12 @@ let reset = document.querySelector('#reset');
 reset.addEventListener('click', () => {
   document.querySelectorAll('.grid').forEach(grid => grid.classList.remove('coloured'));
   let newGrid = prompt('Enter the size of the new grid (less than 100)');
-  removeGrid();
-  newGrid > 100 ? alert('Make a smaller grid!') : createGrid(newGrid);
+  if (newGrid > 100) {
+    alert('create a smalle grid!');
+  } else {
+    removeGrid();
+    createGrid(newGrid);
+  }
 });
 
 let black = document.querySelector('#black');
