@@ -1,9 +1,19 @@
-.main-grid {
-  display: flex;
-}
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
 
 body {
   background-color: paleturquoise;
+}
+
+.main-grid {
+  display: flex;
+  margin-top: 32px;
+}
+
+.title {
+  font-family: "Dancing Script", sans-serif;
+  font-weight: 700;
+  font-size: 64px;
+  margin-bottom: 16px;
 }
 
 .container {
