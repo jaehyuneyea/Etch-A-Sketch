@@ -6,7 +6,7 @@ body {
 
 .main-grid {
   display: flex;
-  margin-top: 32px;
+  margin: 32px 0px;
 }
 
 .title {
