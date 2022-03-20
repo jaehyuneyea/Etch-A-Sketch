@@ -19,12 +19,13 @@ function createGrid(size) {
       box.style.height = `${MAX_WIDTH / size}px`;
       box.style.width = `${MAX_WIDTH / size}px`;
       box.style.border = '1px solid black';
+      box.style.backgroundColor = 'white';
       currRow.append(box);
     }
   }
   let grids = document.querySelectorAll('.grid');
   grids.forEach(grid => grid.addEventListener('mouseover', () => {
-    grid.classList.add('coloured');
+    grid.style.backgroundColor = 'black';
   }));
 }
 
@@ -53,7 +54,6 @@ black.addEventListener('click', () => {
   let grids = document.querySelectorAll('.grid');
   grids.forEach(grid => grid.addEventListener('mouseover', () => {
     grid.style.backgroundColor = 'black';
-    grid.classList.add('coloured');
   }))
 })
 
@@ -61,7 +61,6 @@ let rgbButton = document.querySelector('#rgb');
 rgbButton.addEventListener('click', () => {
   let grids = document.querySelectorAll('.grid');
   grids.forEach(grid => grid.addEventListener('mouseover', () => {
-    grid.classList.remove('coloured');
     let r = random_RGB();
     let g = random_RGB();
     let b = random_RGB();
