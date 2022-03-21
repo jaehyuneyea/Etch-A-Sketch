@@ -44,10 +44,10 @@ createGrid(gridSize);
 let reset = document.querySelector('#reset');
 reset.addEventListener('click', () => {
   document.querySelectorAll('.grid').forEach(grid => grid.classList.remove('coloured'));
-  let newGrid = prompt('Enter the size of the new grid (less than 100)');
+  let newGrid = Number(prompt('Enter the size of the new grid (less than 100)'));
   if (newGrid > 100) {
     alert('create a smaller grid!');
-  } else if (typeof newGrid != 'number') {
+  } else if (isNaN(newGrid)) {
     alert('Enter a valid number!');
   } else {
     removeGrid();
