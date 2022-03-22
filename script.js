@@ -47,7 +47,7 @@ reset.addEventListener('click', () => {
   let newGrid = Number(prompt('Enter the size of the new grid (less than 100)'));
   if (newGrid > 100) {
     alert('create a smaller grid!');
-  } else if (isNaN(newGrid)) {
+  } else if (isNaN(newGrid) || newGrid == '') {
     alert('Enter a valid number!');
   } else {
     removeGrid();
