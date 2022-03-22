@@ -1,1 +1,9 @@
 # Etch-A-Sketch
+
+<p>This web application is an computer-version of an etch-a-sketch; as you hover over the tiles with your mouse, it colours itself into that tile. The reset button clears the board and gives you the option of resizing up to a grid size of 100x100! The RGB button selects a random RGB value and colours it onto the tile.</p>
+
+<p>3/19/2022: Finished the main application, used nested for loops to create the main grid and event listeners to handle the coloring.</p>
+<p>The most challenging part was having to switch from RGB to Black and vice versa. I originally approached the problem inefficiently, adding a class to hovered grids- which works fine, but it becomes more complicated when having options to change between colors, because then I was unsure where to go from there. Initially, I tried to change the CSS class itself from JavaScript, which I found wasn't an easy task. You can't just make the class from CSS either, since the random RGB value requires random number generating. So I instead modified my event listener to change the background color of the grid which worked out much better.</p>
+<p>This should've been really simple, but I did have trouble dealing with the conditional cases, like handling non-number user inputs. Since I'm still fairly new to JavaScript, I forgot that prompt returns a string value and that bug went unnoticed for longer than it should've.</p>
+
+<p>I'm hoping in the future that I won't need that prompt option, as I'm going to try and make the resizing more interactive, like a slider or a side menu bar where you can directly change the size and have the reset button independent to it.</p>
