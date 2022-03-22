@@ -1,5 +1,5 @@
 let gridSize = 16;
-const MAX_WIDTH = 480;
+const MAX_WIDTH = 640;
 const container = document.querySelector('.main-grid');
 container.style.height = `${MAX_WIDTH}px`;
 container.style.width = `${MAX_WIDTH}px`;
@@ -18,7 +18,7 @@ function createGrid(size) {
       box.className = 'grid';
       box.style.height = `${MAX_WIDTH / size}px`;
       box.style.width = `${MAX_WIDTH / size}px`;
-      box.style.border = '1px solid black';
+      // box.style.border = '1px solid black';
       box.style.backgroundColor = 'white';
       currRow.append(box);
     }
