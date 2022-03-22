@@ -1,5 +1,5 @@
 let gridSize = 16;
-const MAX_WIDTH = 640;
+const MAX_WIDTH = 480;
 const container = document.querySelector('.main-grid');
 container.style.height = `${MAX_WIDTH}px`;
 container.style.width = `${MAX_WIDTH}px`;
