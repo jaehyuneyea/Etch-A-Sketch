@@ -7,3 +7,5 @@
 <p>This should've been really simple, but I did have trouble dealing with the conditional cases, like handling non-number user inputs. Since I'm still fairly new to JavaScript, I forgot that prompt returns a string value and that bug went unnoticed for longer than it should've.</p>
 
 <p>I'm hoping in the future that I won't need that prompt option, as I'm going to try and make the resizing more interactive, like a slider or a side menu bar where you can directly change the size and have the reset button independent to it.</p>
+
+<p>3/21/2022: Okay, so I've had a problem with the grid where resizing it to a bigger size would cause centering issues and the box would grow over the max width that I set even when I centered it. Turns out the issue was that I had borders on each grid. I forgot that borders grow outwards, not inwards so that extra pixel or two accumulates as the number of grids increases. The grids were there in the first place to debug and I forgot the remove it. Whoops.. At least it's fixed now :)</p>
